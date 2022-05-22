@@ -1,2 +1,4 @@
 <?php
-    if()
+    class LoginController extends SiteController{
+
+    }

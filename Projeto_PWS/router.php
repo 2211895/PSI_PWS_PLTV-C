@@ -1,15 +1,17 @@
 <?php
 
 /* Arranque da aplicação */
-require_once './startup/boot.php';
+//require_once './startup/boot.php';
 
 /* Controladores */
 require_once './controllers/SiteController.php';
+require_once './controllers/LoginController.php';
 
 if(!(isset($_GET['c']) && isset($_GET['a']))){
     // Controller e action por omissão
+
     $siteController = new SiteController();
-    $siteController->index();
+    $siteController->redirectToRoute('login','index');
 }else {
     //trabalha com o c=site no link
     $controller = $_GET['c'];
@@ -17,23 +19,11 @@ if(!(isset($_GET['c']) && isset($_GET['a']))){
     $action = $_GET['a'];
 
     switch ($controller) {
-        case 'site':
-            $siteController = new SiteController();
+        case 'login':
+            $loginController = new LoginController();
             switch ($action) {
                 case 'index':
-                    $siteController->index();
-                    break;
-                case 'show':
-                    $siteController->demo();
-                    break;
-                case 'name':
-                    $siteController->name();
-                    break;
-                case 'plano':
-                    $siteController->plano();
-                    break;
-                case 'processa':
-                    $siteController->processa();
+                    $loginController->renderView('Login');
                     break;
             }
             break;
