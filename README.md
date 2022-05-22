@@ -1,8 +1,8 @@
 # PSI_PWS_PLTV-C
 
-**Projeto de PWS grupo-C**
+##Projeto de PWS grupo-C
 ***
-Realizado por:
-Diogo Gomes nº2212468
-Gonçalo Neves nº2211895
+Realizado por: <br>
+Diogo Gomes nº2212468 <br>
+Gonçalo Neves nº2211895 <br>
 Tiago Januário nº2211907
