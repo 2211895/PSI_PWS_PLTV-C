@@ -12,4 +12,3 @@ ActiveRecord\Config::initialize(function($cfg)
         )
     );
 });
-

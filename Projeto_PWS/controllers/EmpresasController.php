@@ -1,36 +1,36 @@
 <?php
 
-class UsersController extends SiteController
+class EmpresasController extends SiteController
 {
-    public function showUsers(){
-        $users = User::all();
-        $this->renderView('Users', $users);
+    public function showEmpresas(){
+        $empresas = Empresa::all();
+        $this->renderView('Empresas', $empresas);
     }
 
-    public function detailsUser($id){
+    public function detailsEmpresa($id){
 
     }
 
-    public function editUser($id){
-        $users = User::find([$id]);
-        if (is_null($users)) {
+    public function editEmpresa($id){
+        $empresa = Empresa::find([$id]);
+        if (is_null($empresa)){
             //TODO redirect to standard error page
         } else {
             //mostrar a vista edit passando os dados por parâmetro
-            require_once 'views/site/UsersEdit.php';
+            require_once 'views/site/EmpresasEdit.php';
         }
     }
 
-    public function updateUser($id){
-        $user = User::find([$id]);
-        $user->update_attributes($_POST);
+    public function updateEmpresa($id){
+        $empresa = Empresa::find([$id]);
+        $empresa->update_attributes($_POST);
 
-        if($user->is_valid()){
-            $user->save();
-            $this->redirectToRoute('users', 'index');
+        if($empresa->is_valid()){
+            $empresa->save();
+            $this->redirectToRoute('empresas', 'index');
         } else {
             //DA ERRO POP UP
-            $this->redirectToRoute('users', 'edit');
+            $this->redirectToRoute('empresas', 'edit');
         }
     }
 
@@ -67,5 +67,6 @@ class UsersController extends SiteController
             //ERRO POP UP
             $this->redirectToRoute('users', 'index');
         }
+
     }
 }
