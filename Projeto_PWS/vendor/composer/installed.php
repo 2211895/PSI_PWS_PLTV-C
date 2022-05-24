@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '1340ccc3e975af06e3f5247185db5f34bb098c65',
+        'reference' => '1df72bfb033d02229629fa2424fc5ef4f8d63c02',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '1340ccc3e975af06e3f5247185db5f34bb098c65',
+            'reference' => '1df72bfb033d02229629fa2424fc5ef4f8d63c02',
             'dev_requirement' => false,
         ),
         'php-activerecord/php-activerecord' => array(

@@ -7,7 +7,7 @@
         <div id = "Login" >
             <h1 id = "login-text" > Login</h1 >
             <div >
-                <form id = "formulario" action = "=controllers/LoginController.php" method = "post" >
+                <form id = "formulario" action = "router.php?c=login&a=auth" method = "post" >
 
                     <p > Nome:</p >
                     <input class="inputs" type = "text" name = "nome" ><br >
@@ -15,7 +15,7 @@
                     <p > Password:</p >
                     <input class="inputs" type = "password" name = "password" ><br >
 
-                    <a href = "page1" ><input id = "submitInput" type = "submit" vaule = "Entrar" ></a >
+                    <a href = "page1" ><input id = "submitInput" type = "submit" value = "Entrar" ></a >
                 </form >
             </div >
         </div >
