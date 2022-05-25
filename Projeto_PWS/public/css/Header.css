@@ -1,0 +1,14 @@
+
+#header{
+    margin: 0;
+    background-color: #27282b;
+    height: 50px;
+    color: white;
+
+}
+
+#faturaTxt{
+    margin: auto;
+    padding-top: 10px;
+    padding-left: 50px;
+}
