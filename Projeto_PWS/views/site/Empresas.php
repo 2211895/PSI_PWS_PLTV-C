@@ -9,7 +9,8 @@ $empresas = $params;
     <h2 class="top-space"></h2>
     <div class="row">
         <div class="col-sm-12">
-            <table class="table tablestriped"><thead>
+            <table class="table tablestriped">
+                <thead>
                 <th><h3>Id</h3></th>
                 <th><h3>Name</h3></th>
                 <th><h3>Email</h3></th>
@@ -18,7 +19,9 @@ $empresas = $params;
                 <th><h3>Morada</h3></th>
                 <th><h3>Codigo postal</h3></th>
                 <th><h3>Localidade</h3></th>
-                <th><h3>Capital</h3></th></thead>
+                <th><h3>Capital</h3></th>
+                <th><h3>Acções</h3></th>
+                </thead>
                 <tbody>
                 <?php foreach ($empresas as $empresa) { ?>
                     <tr>

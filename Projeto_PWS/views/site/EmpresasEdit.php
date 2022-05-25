@@ -1,3 +1,7 @@
+<?php
+$empresa = $params;
+?>
+
 <h1>EDIT EMPRESA</h1>
 
 <form action=router.php?c=empresas&a=update&id=<?=$empresa->id?> method="post">
@@ -34,3 +38,5 @@
         <input type='number' class="form-control" min="0" step="0.01" name='capital' value="<?=$empresa->capital?>">
     <button type="submit" class="btn btn-info">Submit</button>
 </form>
+
+<a href="router.php?c=empresas&a=index" class="btn btn-info" role="button">Voltar</a>

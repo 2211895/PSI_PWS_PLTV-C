@@ -17,7 +17,8 @@ class UsersController extends SiteController
             //TODO redirect to standard error page
         } else {
             //mostrar a vista edit passando os dados por parâmetro
-            require_once 'views/site/UsersEdit.php';
+            $this->renderView('UsersEdit', $users);
+            //require_once 'views/site/UsersEdit.php';
         }
     }
 

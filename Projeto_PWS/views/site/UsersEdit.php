@@ -1,3 +1,7 @@
+<?php
+$users = $params
+?>
+
 <h1>EDIT USER</h1>
 <!--- DATALISTS --->
 <datalist id="roles">
@@ -50,3 +54,5 @@
     </div>
     <button type="submit" class="btn btn-info">Submit</button>
 </form>
+
+<a href="router.php?c=users&a=index" class="btn btn-info" role="button">Voltar</a>

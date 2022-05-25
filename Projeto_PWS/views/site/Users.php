@@ -19,6 +19,7 @@ $users = $params;
             <th><h3>Codigo postal</h3></th>
             <th><h3>Localidade</h3></th>
             <th><h3>Role</h3></th></thead>
+            <th><h3>Acções</h3></th>
             <tbody>
             <?php foreach ($users as $user) { ?>
                 <tr>

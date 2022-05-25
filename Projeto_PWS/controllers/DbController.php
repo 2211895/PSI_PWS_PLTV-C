@@ -2,7 +2,7 @@
 
 class DbController extends SiteController
 {
-    public function manageUsers{
+    public function manageUsers(){
 
     }
 

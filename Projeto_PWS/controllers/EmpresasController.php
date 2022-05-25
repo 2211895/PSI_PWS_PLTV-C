@@ -17,7 +17,7 @@ class EmpresasController extends SiteController
             //TODO redirect to standard error page
         } else {
             //mostrar a vista edit passando os dados por parâmetro
-            require_once 'views/site/EmpresasEdit.php';
+            $this->renderView('EmpresasEdit', $empresa);
         }
     }
 

@@ -12,9 +12,17 @@ require_once 'controllers/SiteController.php';
 require_once 'controllers/LoginController.php';
 require_once 'controllers/UsersController.php';
 require_once 'controllers/EmpresasController.php';
+require_once 'controllers/IvaController.php';
 
 /* Modelos */
+require_once 'models/Auth.php';
 require_once 'models/User.php';
+require_once 'models/Empresa.php';
+require_once 'models/Fatura.php';
+require_once 'models/Iva.php';
+require_once 'models/Linhafatura.php';
+require_once 'models/Produto.php';
+
 
 if(!(isset($_GET['c']) && isset($_GET['a']))){
     // Controller e action por omissão
@@ -100,7 +108,7 @@ if(!(isset($_GET['c']) && isset($_GET['a']))){
 
                 case 'details':
                     $id = $_GET['id'];
-                    $empresasController->
+                    $empresasController->detailsEmpresa($id);
                     break;
 
                 case 'edit':
@@ -108,10 +116,48 @@ if(!(isset($_GET['c']) && isset($_GET['a']))){
                     $empresasController->editEmpresa($id);
                     break;
 
-                case 'update'    :
+                case 'update':
                     $id = $_GET['id'];
                     $empresasController->updateEmpresa($id);
             }
+            break;
+
+        case 'ivas':
+            $ivasController = new IvaController();
+            switch ($action){
+                case 'index':
+                    $ivasController->showIvas();
+                    break;
+
+                case 'details':
+                    $id = $_GET['id'];
+                    $ivasController->detailsIva($id);
+                    break;
+
+                case 'edit':
+                    $id = $_GET['id'];
+                    $ivasController->editIva($id);
+                    break;
+
+                case 'update':
+                    $id = $_GET['id'];
+                    $ivasController->updateIva($id);
+                    break;
+
+                case 'create':
+                    $ivasController->createIva();
+                    break;
+
+                case 'store':
+                    $ivasController->storeIva();
+                    break;
+
+                case 'delete':
+                    $id = $_GET['id'];
+                    $ivasController->deleteIva($id);
+                    break;
+            }
+            break;
     }
 
 }

@@ -13,6 +13,6 @@
 
                     <a href = "HomeTemplate.php" ><input id = "submitInput" type = "submit" vaule = "Entrar" ></a >
                 </form >
-            </div >
         </div >
-    </div>
+    </div >
+</div>
