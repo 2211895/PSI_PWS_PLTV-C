@@ -11,7 +11,7 @@
 
                     <input class="inputs" type = "password" name = "password" placeholder="Password"><br >
 
-                    <a href = "HomeTemplate.php" ><input id = "submitInput" type = "submit" vaule = "Entrar" ></a >
+                    <a href = "HomeTemplate.php" ><input id = "submitInput" type = "submit" value = "Entrar" ></a >
                 </form >
         </div >
     </div >

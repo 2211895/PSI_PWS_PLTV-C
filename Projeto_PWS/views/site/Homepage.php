@@ -7,7 +7,6 @@
    class="btn btn-info" role="button">Logout</a>
 
 <?php
-session_start();
 if($_SESSION['role']!=3){
     echo '
         <a href="router.php?c=users&a=index"
