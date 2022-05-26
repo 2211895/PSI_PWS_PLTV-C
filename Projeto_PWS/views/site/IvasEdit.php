@@ -3,8 +3,6 @@ $iva = $params;
 ?>
 
 <h1>EDIT IVA</h1>
-<!--- DATALISTS --->
-
 
 <form action=router.php?c=ivas&a=update&id=<?=$iva->id?> method="post">
     <div>

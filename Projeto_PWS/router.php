@@ -13,6 +13,7 @@ require_once 'controllers/LoginController.php';
 require_once 'controllers/UsersController.php';
 require_once 'controllers/EmpresasController.php';
 require_once 'controllers/IvaController.php';
+require_once 'controllers/ProdutosController.php';
 
 /* Modelos */
 require_once 'models/Auth.php';
@@ -156,6 +157,42 @@ if(!(isset($_GET['c']) && isset($_GET['a']))){
                     $id = $_GET['id'];
                     $ivasController->deleteIva($id);
                     break;
+            }
+            break;
+
+        case 'produtos':
+            $produtosController = new ProdutosController();
+            switch ($action){
+                case 'index':
+                    $produtosController->showProdutos();
+                    break;
+
+                /*case 'details':
+                    $id = $_GET['id'];
+
+                    break;
+
+                case 'edit':
+                    $id = $_GET['id'];
+
+                    break;
+
+                case 'update':
+                    $id = $_GET['id'];
+
+                    break;
+
+                case 'create':
+
+                    break;
+
+                case 'store':
+
+                    break;
+
+                case 'delete':
+                    $id = $_GET['id'];
+                    break;*/
             }
             break;
     }

@@ -6,8 +6,7 @@ class SiteController
     {
         session_start();
         if(!isset($_SESSION['username']))
-            header("Location: ./router.php?c=login&a=index");
-
+            $this->redirectToRoute('login', 'index');
     }
 
     public function redirectToRoute($controller,$action){
