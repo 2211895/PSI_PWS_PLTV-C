@@ -2,6 +2,14 @@
 
 class SiteController
 {
+    public function __construct()
+    {
+        session_start();
+        if(!isset($_SESSION['username']))
+            header("Location: ./router.php?c=login&a=index");
+
+    }
+
     public function redirectToRoute($controller,$action){
         header("Location: ./router.php?c=$controller&a=$action");
     }
