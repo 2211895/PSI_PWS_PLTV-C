@@ -39,7 +39,7 @@ class IvaController extends SiteController
     }
 
     public function storeIva(){
-        if(!empty($_POST['percentagem'])&&!empty($_POST['descricao'])&&!empty($_POST['vigor'])){
+        if(!empty($_POST['percentagem'])&&!empty($_POST['descricao']) && ($_POST['vigor']==0 || $_POST['vigor']==1)){
             $iva = new Iva($_POST);
             if($iva->is_valid()){
                 $iva->save();

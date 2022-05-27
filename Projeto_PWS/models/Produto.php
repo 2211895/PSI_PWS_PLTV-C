@@ -8,4 +8,8 @@ class Produto extends \ActiveRecord\Model
         array('preco'),
         array('stock')
     );
+
+    static $belongs_to = array(
+        array('iva')
+    );
 }

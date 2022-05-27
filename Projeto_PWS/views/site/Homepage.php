@@ -14,7 +14,9 @@ if($_SESSION['role']!=3){
         <a href="router.php?c=empresas&a=index"
         class="btn btn-info" role="button">Empresas</a>
         <a href="router.php?c=ivas&a=index"
-        class="btn btn-info" role="button">Ivas</a>';
+        class="btn btn-info" role="button">Ivas</a>
+        <a href="router.php?c=produtos&a=index"
+        class="btn btn-info" role="button">Produtos</a>';
 }
 ?>
 <br>
