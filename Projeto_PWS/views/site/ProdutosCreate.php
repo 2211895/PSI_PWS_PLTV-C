@@ -1,3 +1,6 @@
+<?php
+$ivas = Iva::all();
+?>
 <h1>CREATE PRODUTO</h1>
 
 <form action=router.php?c=produtos&a=store method="post">

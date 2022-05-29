@@ -36,37 +36,32 @@ class ProdutosController extends SiteController
     }
 
     public function createProduto(){
+
         $this->renderView('ProdutosCreate', 0);
     }
 
     public function storeProduto(){
-        if(!empty($_POST['username'])&&!empty($_POST['password'])&&!empty($_POST['email'])&&!empty($_POST['telefone'])&&!empty($_POST['nif'])&&!empty($_POST['morada'])&&!empty($_POST['codigopostal'])&&!empty($_POST['localidade'])&&!empty($_POST['role'])){
-            $user = new User($_POST);
-            if($user->is_valid()){
-                $user->save();
-                $this->redirectToRoute('users','index');
+        if(!empty($_POST['referencia'])&&!empty($_POST['descricao'])&&!empty($_POST['preco'])&&!empty($_POST['stock'])&&!empty($_POST['iva_id'])){
+            $produto = new Produto($_POST);
+            if($produto->is_valid()){
+                $produto->save();
+                $this->redirectToRoute('produtos','index');
             }
             else{
                 //DA ERRO  POP UP
-                $this->redirectToRoute('users', 'create');
+                $this->redirectToRoute('produtos', 'create');
             }
         }
         else{
             //DA ERRO POP UP
-            $this->redirectToRoute('users','create');
+            $this->redirectToRoute('produtos','create');
         }
 
     }
 
     public function deleteProduto($id){
-        $user = User::find([$id]);
-        if($user->role != 1){ //NAO PODE APAGAR CASO SEJA ADMINISTRADOR
-            $user->delete();
-            $this->redirectToRoute('users', 'index');
-        }
-        else{
-            //ERRO POP UP
-            $this->redirectToRoute('users', 'index');
-        }
+        $produto = Produto::find([$id]);
+        $produto->delete();
+        $this->redirectToRoute('produtos', 'index');
     }
 }
