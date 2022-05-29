@@ -7,39 +7,39 @@ class ProdutosController extends SiteController
         $this->renderView('Produtos', $produtos);
     }
 
-    /*public function detailsUser($id){
+    public function detailsUser($id){
 
     }
 
-    public function editUser($id){
-        $users = User::find([$id]);
-        if (is_null($users)) {
+    public function editProduto($id){
+        $produto = Produto::find([$id]);
+        if (is_null($produto)) {
             //TODO redirect to standard error page
         } else {
             //mostrar a vista edit passando os dados por parâmetro
-            $this->renderView('UsersEdit', $users);
+            $this->renderView('ProdutosEdit', $produto);
             //require_once 'views/site/UsersEdit.php';
         }
     }
 
-    public function updateUser($id){
-        $user = User::find([$id]);
-        $user->update_attributes($_POST);
+    public function updateProduto($id){
+        $produto = Produto::find([$id]);
+        $produto->update_attributes($_POST);
 
-        if($user->is_valid()){
-            $user->save();
-            $this->redirectToRoute('users', 'index');
+        if($produto->is_valid()){
+            $produto->save();
+            $this->redirectToRoute('produtos', 'index');
         } else {
             //DA ERRO POP UP
-            $this->redirectToRoute('users', 'edit');
+            $this->redirectToRoute('produtos', 'edit');
         }
     }
 
-    public function createUser(){
-        $this->renderView('UsersCreate', 0);
+    public function createProduto(){
+        $this->renderView('ProdutosCreate', 0);
     }
 
-    public function storeUser(){
+    public function storeProduto(){
         if(!empty($_POST['username'])&&!empty($_POST['password'])&&!empty($_POST['email'])&&!empty($_POST['telefone'])&&!empty($_POST['nif'])&&!empty($_POST['morada'])&&!empty($_POST['codigopostal'])&&!empty($_POST['localidade'])&&!empty($_POST['role'])){
             $user = new User($_POST);
             if($user->is_valid()){
@@ -58,7 +58,7 @@ class ProdutosController extends SiteController
 
     }
 
-    public function deleteUser($id){
+    public function deleteProduto($id){
         $user = User::find([$id]);
         if($user->role != 1){ //NAO PODE APAGAR CASO SEJA ADMINISTRADOR
             $user->delete();
@@ -68,5 +68,5 @@ class ProdutosController extends SiteController
             //ERRO POP UP
             $this->redirectToRoute('users', 'index');
         }
-    }*/
+    }
 }

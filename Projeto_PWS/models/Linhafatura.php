@@ -7,4 +7,9 @@ class Linhafatura extends \ActiveRecord\Model
         array('valorunitario'),
         array('valoriva')
     );
+
+    static $belongs_to = array(
+        array('fatura'),
+        array('produto')
+    );
 }

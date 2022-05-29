@@ -167,32 +167,33 @@ if(!(isset($_GET['c']) && isset($_GET['a']))){
                     $produtosController->showProdutos();
                     break;
 
-                /*case 'details':
+                case 'details':
                     $id = $_GET['id'];
 
                     break;
 
                 case 'edit':
                     $id = $_GET['id'];
-
+                    $produtosController->editProduto($id);
                     break;
 
                 case 'update':
                     $id = $_GET['id'];
-
+                    $produtosController->updateProduto($id);
                     break;
 
                 case 'create':
-
+                    $produtosController->createProduto();
                     break;
 
                 case 'store':
-
+                    $produtosController->storeProduto();
                     break;
 
                 case 'delete':
                     $id = $_GET['id'];
-                    break;*/
+                    $produtosController->deleteProduto($id);
+                    break;
             }
             break;
     }
