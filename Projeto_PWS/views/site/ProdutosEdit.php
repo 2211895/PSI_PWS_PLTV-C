@@ -1,6 +1,8 @@
 <?php
 $produtos = $params;
 $ivas = Iva::all();
+if($_SESSION['role'] == 3)
+    header('location: router.php?c=site&a=index');
 ?>
 
 <h1>EDIT PRODUTO</h1>

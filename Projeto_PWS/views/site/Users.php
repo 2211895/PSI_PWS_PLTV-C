@@ -1,5 +1,6 @@
 <?php
 $users = $params;
+
 ?>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -45,8 +46,12 @@ $users = $params;
                     <td>
                         <a href="router.php?c=users&a=details&id=<?=$user->id ?>"
                            class="btn btn-info" role="button">Details</a>
-                        <a href="router.php?c=users&a=edit&id=<?=$user->id ?>"
-                           class="btn btn-info" role="button">Edit</a>
+
+                        <?php if($_SESSION['userId']==$user->id || $_SESSION['role']==1) {
+                            echo "<a href='router.php?c=users&a=edit&id=<?=$user->id'
+                           class='btn btn-info' role='button'>Edit</a>";
+                        }
+                        ?>
                         <?php if($user->role !=1) {
                             echo "<a href='router.php?c=users&a=delete&id=$user->id'
                            class='btn btn-warning' role='button'>Delete</a>";

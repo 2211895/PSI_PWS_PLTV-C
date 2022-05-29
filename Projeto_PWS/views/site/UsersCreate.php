@@ -1,3 +1,4 @@
+
 <h1>CREATE USER</h1>
 <!--- DATALISTS --->
 <datalist id="roles">
@@ -42,8 +43,10 @@
     <div>
         <label>ROLE:</label>
         <select name="role">
-            <option value=1>Administrador</option>
-            <option value=2>Funcionario</option>
+            <?php if($_SESSION['role']==1){?>
+                <option value=1>Administrador</option>
+                <option value=2>Funcionario</option>
+            <?php } ?>
             <option value=3>Cliente</option>
         </select>
        <!-- <input type='number' class="form-control" min="1" max="3" name='role' placeholder="Insira o role do user...">--->
