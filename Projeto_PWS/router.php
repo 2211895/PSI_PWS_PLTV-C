@@ -14,6 +14,7 @@ require_once 'controllers/UsersController.php';
 require_once 'controllers/EmpresasController.php';
 require_once 'controllers/IvaController.php';
 require_once 'controllers/ProdutosController.php';
+require_once 'controllers/FaturasController.php';
 
 /* Modelos */
 require_once 'models/Auth.php';
@@ -45,7 +46,7 @@ if(!(isset($_GET['c']) && isset($_GET['a']))){
                     break;
 
                 case 'auth':
-                    $loginController->login($_POST['nome'],$_POST['password']);
+                    $loginController->login($_POST['nome'], $_POST['password']);
                     break;
 
                 case 'logout':
@@ -56,16 +57,16 @@ if(!(isset($_GET['c']) && isset($_GET['a']))){
 
         case 'site':
             $siteController = new SiteController();
-            switch ($action){
+            switch ($action) {
                 case 'index':
-                    $siteController->renderView('Homepage',0);
+                    $siteController->renderView('Homepage', 0);
                     break;
             }
             break;
 
         case 'users':
             $usersController = new UsersController();
-            switch ($action){
+            switch ($action) {
                 case 'index':
                     $usersController->showUsers();
                     break;
@@ -102,7 +103,7 @@ if(!(isset($_GET['c']) && isset($_GET['a']))){
 
         case 'empresas':
             $empresasController = new EmpresasController();
-            switch ($action){
+            switch ($action) {
                 case 'index':
                     $empresasController->showEmpresas();
                     break;
@@ -125,7 +126,7 @@ if(!(isset($_GET['c']) && isset($_GET['a']))){
 
         case 'ivas':
             $ivasController = new IvaController();
-            switch ($action){
+            switch ($action) {
                 case 'index':
                     $ivasController->showIvas();
                     break;
@@ -162,7 +163,7 @@ if(!(isset($_GET['c']) && isset($_GET['a']))){
 
         case 'produtos':
             $produtosController = new ProdutosController();
-            switch ($action){
+            switch ($action) {
                 case 'index':
                     $produtosController->showProdutos();
                     break;
@@ -196,6 +197,24 @@ if(!(isset($_GET['c']) && isset($_GET['a']))){
                     break;
             }
             break;
-    }
+        case 'faturas':
+            $faturasController = new FaturasController();
+            switch ($action){
+                case 'index':
+                    $faturasController->showFaturas();
+                    break;
 
+                case 'create':
+                    $id = $_GET['id'];
+                    $faturasController->createFatura();
+                    break;
+
+                case 'store':
+                    break;
+
+                case 'cliente':
+                    $id = $_GET['id'];
+            }
+            break;
+    }
 }

@@ -52,5 +52,7 @@
        <!-- <input type='number' class="form-control" min="1" max="3" name='role' placeholder="Insira o role do user...">--->
     </div>
     <button type="submit" class="btn btn-info">Submit</button>
+    <a href="router.php?c=users&a=index" class="btn btn-info"
+       role="button">Homepage</a>
 </form>
 

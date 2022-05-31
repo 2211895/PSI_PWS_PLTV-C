@@ -19,8 +19,8 @@ $users = $params;
             <th><h3>Morada</h3></th>
             <th><h3>Codigo postal</h3></th>
             <th><h3>Localidade</h3></th>
-            <th><h3>Role</h3></th></thead>
-            <th><h3>Acções</h3></th>
+            <th><h3>Role</h3></th>
+            <th><h3>Acções</h3></th></thead>
             <tbody>
             <?php foreach ($users as $user) { ?>
                 <tr>
@@ -48,7 +48,7 @@ $users = $params;
                            class="btn btn-info" role="button">Details</a>
 
                         <?php if($_SESSION['userId']==$user->id || $_SESSION['role']==1) {
-                            echo "<a href='router.php?c=users&a=edit&id=<?=$user->id'
+                            echo "<a href='router.php?c=users&a=edit&id=$user->id'
                            class='btn btn-info' role='button'>Edit</a>";
                         }
                         ?>
