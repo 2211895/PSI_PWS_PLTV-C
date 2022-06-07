@@ -3,7 +3,9 @@
 
 <link rel = "stylesheet" href = "public/css/Homepage.css" >
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="public/js/NavBar.js"></script>
 <div id="buttons" >
+    <button type="button" onclick="HideNavBar()" id="hideNavBar"><i class="fa-solid fa-bars"></i></button>
     <br> <br> <br>
 <a href="router.php?c=login&a=logout"
     role="button"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
@@ -29,5 +31,3 @@ else
         class="btn btn-info" role="button">Minhas faturas</a>';
 ?>
 </div>
-<br>
-<br>

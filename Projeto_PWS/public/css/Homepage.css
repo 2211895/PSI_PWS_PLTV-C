@@ -1,3 +1,7 @@
+body{
+    margin: 0;
+}
+
 #buttons{
     background-color: #27282b;
     width: 30%;
@@ -22,4 +26,10 @@
 #buttons a:hover{
     transition: 0.3s;
     background-color: #34353b;
+}
+
+#hideNavBar{
+    background-color: #27282b;
+    border: none;
+    color: white;
 }
