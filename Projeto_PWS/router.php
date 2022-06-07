@@ -15,6 +15,7 @@ require_once 'controllers/EmpresasController.php';
 require_once 'controllers/IvaController.php';
 require_once 'controllers/ProdutosController.php';
 require_once 'controllers/FaturasController.php';
+require_once 'controllers/LinhasFaturaController.php';
 
 /* Modelos */
 require_once 'models/Auth.php';
@@ -205,16 +206,26 @@ if(!(isset($_GET['c']) && isset($_GET['a']))){
                     break;
 
                 case 'create':
-                    $id = $_GET['id'];
                     $faturasController->createFatura();
                     break;
 
                 case 'store':
+                    $id = $_GET['id'];
+                    $faturasController->
                     break;
 
                 case 'cliente':
                     $id = $_GET['id'];
             }
             break;
+
+        case 'linhasfatura':
+            $linhasfaturaController = new LinhasFaturaController();
+            switch ($action){
+                case 'show':
+                    break;
+            }
+            break;
     }
+
 }

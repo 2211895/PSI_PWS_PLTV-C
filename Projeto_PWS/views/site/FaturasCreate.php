@@ -38,7 +38,7 @@ $users = User::all();
                         <td><?=$user->codigopostal?></td>
                         <td><?=$user->localidade?></td>
                         <td>
-                            <a href="router.php?c=linhasfatura&a=create&id=<?=$user->id ?>"
+                            <a href="router.php?c=faturas&a=store&id=<?=$user->id ?>"
                                class="btn btn-info" role="button">Selecionar Cliente</a>
                         </td>
                     </tr>
