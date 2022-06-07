@@ -25,7 +25,7 @@ $faturas = $params;
                 ?>
                 <tr>
                     <td><?=$fatura->id?></td>
-                    <td><?=$fatura->data->format('Y-m-d H:i')?></td>
+                    <td><?=$fatura->data?></td>
                     <td><?=$fatura->valortotal?></td>
                     <td><?=$fatura->ivatotal?></td>
                     <td><?=$fatura->estado  //mete um if nisso?></td>

@@ -211,11 +211,12 @@ if(!(isset($_GET['c']) && isset($_GET['a']))){
 
                 case 'store':
                     $id = $_GET['id'];
-                    $faturasController->
+                    $faturasController->storeFatura($id);
                     break;
 
                 case 'cliente':
                     $id = $_GET['id'];
+                    break;
             }
             break;
 
