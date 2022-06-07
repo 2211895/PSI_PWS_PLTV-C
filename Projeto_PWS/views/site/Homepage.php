@@ -1,30 +1,33 @@
 <?php
 ?>
-<br>
-<br>
 
+<link rel = "stylesheet" href = "public/css/Homepage.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div id="buttons" >
+    <br> <br> <br>
 <a href="router.php?c=login&a=logout"
-   class="btn btn-info" role="button">Logout</a>
+    role="button"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
 
 <?php
 if($_SESSION['role']!=3){
     echo '
         <a href="router.php?c=users&a=index"
-        class="btn btn-info" role="button">Users</a>
+         role="button"><i class="fa-solid fa-user"></i> Users</a>
         <a href="router.php?c=empresas&a=index"
-        class="btn btn-info" role="button">Empresas</a>
+         role="button"><i class="fa-solid fa-building"></i> Empresas</a>
         <a href="router.php?c=ivas&a=index"
-        class="btn btn-info" role="button">Ivas</a>
+         role="button"><i class="fa-solid fa-percent"></i> Ivas</a>
         <a href="router.php?c=produtos&a=index"
-        class="btn btn-info" role="button">Produtos</a>
+         role="button"><i class="fa-solid fa-cart-shopping"></i> Produtos</a>
         <a href="router.php?c=faturas&a=index"
-        class="btn btn-info" role="button">Histórico de faturas</a>
+         role="button"><i class="fa-solid fa-clock-rotate-left"></i> Histórico de faturas</a>
         <a href="router.php?c=faturas&a=create"
-        class="btn btn-info" role="button">Nova fatura</a>';
+         role="button"><i class="fa-solid fa-file-circle-plus"></i> Nova fatura</a>';
 }
 else
     echo '<a href="router.php?c=faturas&a=cliente&id=' . $_SESSION['userId'] . '"
         class="btn btn-info" role="button">Minhas faturas</a>';
 ?>
+</div>
 <br>
 <br>
