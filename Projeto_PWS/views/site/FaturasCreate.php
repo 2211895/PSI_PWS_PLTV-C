@@ -7,10 +7,10 @@ $users = User::all();
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="public/js/FaturasCreate.js"></script>
 
-<link rel = "stylesheet" href = "public/css/FaturasCreate.css" >
+<link rel = "stylesheet" href = "public/css/BarraPesquisa.css" >
 
 <h2>Users</h2>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+<input type="text" id="Input" onkeyup="barraPesquisa()" placeholder="Search for names..">
 <h2 class="top-space"></h2>
 <div class="row">
     <div class="col-sm-12">

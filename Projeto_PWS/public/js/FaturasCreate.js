@@ -1,7 +1,7 @@
-function myFunction() {
-    // Declare variables
+function barraPesquisa() {
+
     var input, filter, table, tr, td, tb, i, txtValue;
-    input = document.getElementById("myInput");
+    input = document.getElementById("Input");
     filter = input.value.toUpperCase();
     table = document.getElementById("myTable");
     tr = table.getElementsByTagName("tr");
