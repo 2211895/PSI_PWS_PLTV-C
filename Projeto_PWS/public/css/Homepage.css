@@ -2,10 +2,15 @@ body{
     margin: 0;
 }
 
+*{
+    font-family: Arial;
+}
+
 #buttons{
     background-color: #27282b;
     width: 30%;
     height: 100vh;
+    transition: 0.5s;
 
 }
 
@@ -32,4 +37,8 @@ body{
     background-color: #27282b;
     border: none;
     color: white;
+}
+
+.NavText{
+    visibility: visible;
 }

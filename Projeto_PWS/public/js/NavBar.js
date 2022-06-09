@@ -1,3 +1,3 @@
 function HideNavBar(){
-    
+    alert("aaaaaaaaa");
 }
