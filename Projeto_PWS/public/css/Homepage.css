@@ -37,8 +37,10 @@ body{
     background-color: #27282b;
     border: none;
     color: white;
+    transform: rotate(0deg);
+    transition: 0.3s;
 }
 
 .NavText{
-    visibility: visible;
+    display: inline;
 }
