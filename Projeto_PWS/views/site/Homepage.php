@@ -3,41 +3,9 @@
 
 <link rel = "stylesheet" href = "public/css/Homepage.css" >
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<!--<script src="public/js/NavBar.js"></script> !-->
-<script>
-    let x = 0;
-    function HideNavBar(){
-        if (x==0)
-        {
-            document.getElementById("buttons").style.width = "3%" ;
-            var text =  document.getElementsByClassName("NavText");
-            var i;
-            for (i=0; i<text.length; i++)
-            {
-                text[i].style.display = "none";
-            }
+<script src="public/js/NavBar.js"></script>
 
-            var button = document.getElementById("hideNavBar");
-            button.style.transform = "rotate(90deg)";
 
-            x = 1;
-        }
-        else {
-            document.getElementById("buttons").style.width = "30%" ;
-            var text =  document.getElementsByClassName("NavText");
-            var i;
-            for (i=0; i<text.length; i++)
-            {
-                text[i].style.display = "inline";
-            }
-
-            var button = document.getElementById("hideNavBar");
-            button.style.transform = "rotate(0deg)";
-            x = 0;
-        }
-
-    }
-</script>
 <div id="buttons" >
 
     <button type="button" onclick="HideNavBar()" id="hideNavBar"><i class="fa-solid fa-bars"></i></button>
