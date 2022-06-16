@@ -1,0 +1,15 @@
+html,body{
+    height:290mm;
+    width:200mm;
+    margin-left: auto;
+    margin-right: auto;
+}
+.column {
+    float: left;
+    width: 50%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

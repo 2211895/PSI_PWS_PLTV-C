@@ -1,5 +1,6 @@
 <?php
 $faturas = $params;
+
 ?>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -25,15 +26,25 @@ $faturas = $params;
                 ?>
                 <tr>
                     <td><?=$fatura->id?></td>
-                    <td><?=$fatura->data?></td>
-                    <td><?=$fatura->valortotal?></td>
-                    <td><?=$fatura->ivatotal?></td>
-                    <td><?=$fatura->estado  //mete um if nisso?></td>
+                    <td><?=$fatura->data->format('d-m-Y H:i:s')?></td>
+                    <td><?=number_format($fatura->valortotal, 2)?>€</td>
+                    <td><?=number_format($fatura->ivatotal, 2)?>€</td>
+                    <td><?php   if($fatura->estado == 0){
+                                    ?>Em lançamento
+                                <?php }
+                                elseif($fatura->estado == 1){
+                                    ?>Terminada
+                                <?php }?></td>
                     <td><?=$cliente->username?></td>
                     <td><?=$funcionario->username?></td>
                     <td>
                         <a href="router.php?c=faturas&a=details&id=<?=$fatura->id ?>"
                            class="btn btn-info" role="button">Details</a>
+                        <?php if($fatura->estado==0){
+                            echo"<a href='router.php?c=faturas&a=edit&id=$fatura->id'
+                                    class='btn btn-info' role='button'>Edit</a>";
+                        }
+                        ?>
                     </td>
                 </tr>
             <?php } ?>

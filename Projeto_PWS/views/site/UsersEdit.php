@@ -1,5 +1,5 @@
 <?php
-$users = $params
+$users = $params;
 ?>
 
 <h1>EDIT USER</h1>
@@ -17,7 +17,7 @@ $users = $params
     </div>
     <div>
         <label>PASSWORD:</label>
-        <input type='text' class="form-control" name='password' value="<?=$users->password?>">
+        <input type='password' class="form-control" name='password' value="<?=$users->password?>">
     </div>
     <div>
         <label>EMAIL:</label>
@@ -46,11 +46,12 @@ $users = $params
     <div>
         <label>ROLE:</label>
         <select name="role">
-            <option value=1>Administrador</option>
+            <?php if($_SESSION['role']==1){?>
+                <option value=1>Administrador</option>
+                <option value=3>Cliente</option>
+            <?php } ?>
             <option value=2>Funcionario</option>
-            <option value=3>Cliente</option>
         </select>
-        <!---<input type='number' class="form-control" min="1" max="3" name='role' value="<?//=$users->role?>">-->
     </div>
     <button type="submit" class="btn btn-info">Submit</button>
 </form>

@@ -35,8 +35,6 @@ $ivas = $params;
                                     break;
                             }?></td>
                         <td>
-                            <a href="router.php?c=ivas&a=details&id=<?=$iva->id ?>"
-                               class="btn btn-info" role="button">Details</a>
                             <a href="router.php?c=ivas&a=edit&id=<?=$iva->id ?>"
                                class="btn btn-info" role="button">Edit</a>
                             <?php if($iva->id > 3){

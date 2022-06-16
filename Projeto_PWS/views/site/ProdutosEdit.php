@@ -28,9 +28,10 @@ if($_SESSION['role'] == 3)
         <label>IVA:</label>
         <select name="iva_id">
         <?php
-        foreach ($ivas as $iva){ ?>
+        foreach ($ivas as $iva){
+            if($iva->vigor==1){?>
                 <option value="<?= $iva->id?>"> <?= $iva->descricao?> <?=$iva->percentagem?>%</option>
-        <?php }?>
+        <?php } }?>
         </select>
     </div>
     <button type="submit" class="btn btn-info">Submit</button>

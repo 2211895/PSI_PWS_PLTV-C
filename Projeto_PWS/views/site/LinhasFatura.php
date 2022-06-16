@@ -1,4 +1,6 @@
 <?php
+$faturaAtual = $params;
+var_dump($faturaAtual->id);
 $produtos = Produto::all();
 
 ?>

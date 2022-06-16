@@ -214,8 +214,34 @@ if(!(isset($_GET['c']) && isset($_GET['a']))){
                     $faturasController->storeFatura($id);
                     break;
 
+                case 'edit':
+                    $id = $_GET['id'];
+                    $faturasController->editFatura($id);
+                    break;
+
+                case 'terminar':
+                    $id = $_GET['id'];
+                    $faturasController->terminarFatura($id);
+                    break;
+
+                case 'details':
+                    $id = $_GET['id'];
+                    $faturasController->detailsFatura($id);
+                    break;
+
                 case 'cliente':
                     $id = $_GET['id'];
+                    $faturasController->showFaturasCliente($id);
+                    break;
+
+                case 'imprimir':
+                    $id = $_GET['id'];
+                    $faturasController->imprimirFatura($id);
+                    break;
+
+                case 'delete':
+                    $id = $_GET['id'];
+                    $faturasController->deleteFatura($id);
                     break;
             }
             break;
@@ -223,8 +249,18 @@ if(!(isset($_GET['c']) && isset($_GET['a']))){
         case 'linhasfatura':
             $linhasfaturaController = new LinhasFaturaController();
             switch ($action){
-                case 'show':
+                case 'store':
+                    $idProduto = $_GET['idProduto'];
+                    $idFatura = $_GET['idFatura'];
+                    $linhasfaturaController->storeLinhaFatura($idProduto,$idFatura);
                     break;
+
+                case 'remove':
+                    $id = $_GET['id'];
+                    $linhasfaturaController->removeLinhaFatura($id);
+                    break;
+
+
             }
             break;
     }

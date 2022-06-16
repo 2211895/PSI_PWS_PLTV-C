@@ -19,4 +19,9 @@ class SiteController
         require_once "./views/site/" .$view. ".php";
         require_once "./views/layout/footer.php";
     }
+    public function renderView2Params($view, $params , $params2) {
+        require_once "./views/layout/header.php";
+        require_once "./views/site/" .$view. ".php";
+        require_once "./views/layout/footer.php";
+    }
 }

@@ -14,8 +14,8 @@ if($_SESSION['role'] == 3)
     <div class="col-sm-12">
         <table class="table tablestriped"><thead>
             <th><h3>Id</h3></th>
-            <th><h3>Referencia</h3></th>
             <th><h3>Descrição</h3></th>
+            <th><h3>Referencia</h3></th>
             <th><h3>Preço</h3></th>
             <th><h3>Stock</h3></th>
             <th><h3>Iva</h3></th>
@@ -24,14 +24,12 @@ if($_SESSION['role'] == 3)
             <?php foreach ($produtos as $produto) { ?>
                 <tr>
                     <td><?=$produto->id?></td>
-                    <td><?=$produto->referencia?></td>
                     <td><?=$produto->descricao?></td>
-                    <td><?=$produto->preco?></td>
+                    <td><?=$produto->referencia?></td>
+                    <td><?=number_format($produto->preco, 2)?>€</td>
                     <td><?=$produto->stock?></td>
                     <td><?=$produto->iva->descricao?>  <?=$produto->iva->percentagem?>%</td>
                     <td>
-                        <a href="router.php?c=produtos&a=details&id=<?=$produto->id ?>"
-                           class="btn btn-info" role="button">Details</a>
                         <a href="router.php?c=produtos&a=edit&id=<?=$produto->id ?>"
                            class="btn btn-info" role="button">Edit</a>
                         <a href='router.php?c=produtos&a=delete&id=<?=$produto->id?>'

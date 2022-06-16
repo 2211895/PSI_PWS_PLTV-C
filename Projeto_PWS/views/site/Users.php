@@ -44,15 +44,18 @@ $users = $params;
                                 break;
                         }?></td>
                     <td>
-                        <a href="router.php?c=users&a=details&id=<?=$user->id ?>"
-                           class="btn btn-info" role="button">Details</a>
+                        <?php if($user->role == 3) {
+                            echo "<a href='router.php?c=faturas&a=cliente&id=$user->id'
+                           class='btn btn-info' role='button'>Detalhes</a>";
+                        }
+                        ?>
 
                         <?php if($_SESSION['userId']==$user->id || $_SESSION['role']==1) {
                             echo "<a href='router.php?c=users&a=edit&id=$user->id'
                            class='btn btn-info' role='button'>Edit</a>";
                         }
                         ?>
-                        <?php if($user->role !=1) {
+                        <?php if($user->role !=1 && $_SESSION['role']==1) {
                             echo "<a href='router.php?c=users&a=delete&id=$user->id'
                            class='btn btn-warning' role='button'>Delete</a>";
                         }
