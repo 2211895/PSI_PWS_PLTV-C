@@ -1,7 +1,7 @@
 <?php
 $users = $params
 ?>
-
+<link rel="stylesheet" href="public/css/Edit.css">
 <h1>EDIT USER</h1>
 <!--- DATALISTS --->
 <datalist id="roles">
@@ -9,7 +9,7 @@ $users = $params
     <option value=2>
     <option value=3>
 </datalist>
-
+<div id="">
 <form action=router.php?c=users&a=update&id=<?=$users->id?> method="post">
     <div>
         <label>NOME:</label>
@@ -56,3 +56,4 @@ $users = $params
 </form>
 
 <a href="router.php?c=users&a=index" class="btn btn-info" role="button">Voltar</a>
+</div>
