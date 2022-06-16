@@ -2,19 +2,19 @@
 $users = $params;
 
 ?>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+!--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel = "stylesheet" href = "public/css/Homepage.css" >
 <link rel="stylesheet" href="public/css/table.css">
 <script src="public/js/NavBar.js"></script>
 
 
-<div style="display: inline-block">
+<div style="justify-content: space-between">
 
-<div id="navBar" style="">
+<div id="navBar" style="float: left">
 
     <div id="buttons" style="margin: 0px" >
+
 
         <button type="button" onclick="HideNavBar()" id="hideNavBar"><i class="fa-solid fa-bars"></i></button>
         <br> <br> <br>
@@ -45,12 +45,12 @@ $users = $params;
 </div>
 
 
-<div >
+<div style="width: 79%; float: right">
     <h2>Users</h2>
     <h2 class="top-space"></h2>
     <div class="row">
         <div>
-            <table style="width: 60%"><thead>
+            <table style="width: 100%; color: black"><thead>
                 <th><h3>Id</h3></th>
                 <th><h3>Name</h3></th>
                 <th><h3>Email</h3></th>
@@ -84,23 +84,24 @@ $users = $params;
                                     break;
                             }?></td>
                         <td style="justify-content: space-between; width: 100px">
-                            <a href="router.php?c=users&a=details&id=<?=$user->id ?>"
-                            class="btn btn-info" role="button"><i class="fa-solid fa-eye"></i></a>
+                            <a href="router.php?c=users&a=details&id=<?=$user->id ?>" role="button"><i class="fa-solid fa-eye" style="color: black"></i></a>
 
                             <?php if($_SESSION['userId']==$user->id || $_SESSION['role']==1) {
                                 echo "<a href='router.php?c=users&a=edit&id=$user->id'
-                                class='btn btn-info' role='button'><i class='fa-solid fa-pencil'></i></a>";
+                                 role='button'><i class='fa-solid fa-pencil' style='color: black'></i></a>";
                             }
                             ?>
                             <?php if($user->role !=1) {
                                 echo "<a href='router.php?c=users&a=delete&id=$user->id'
-                                class='btn btn-warning' role='button'><i class='fa-solid fa-trash-can'></i></a>";
+                                 role='button'><i class='fa-solid fa-trash-can' style='color: black'></i></a>";
                             }
                             ?>
                         </td>
                     </tr>
                 <?php } ?>
+
                 </tbody>
+
             </table>
         </div>
         <div class="col-sm-6">
