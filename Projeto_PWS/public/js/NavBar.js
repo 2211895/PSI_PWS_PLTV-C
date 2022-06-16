@@ -2,7 +2,7 @@ let x = 0;
 function HideNavBar(){
     if (x==0)
     {
-        document.getElementById("buttons").style.width = "3%" ;
+        document.getElementById("navBar").style.width = "2%" ;
         var text =  document.getElementsByClassName("NavText");
         var i;
         for (i=0; i<text.length; i++)
@@ -16,7 +16,7 @@ function HideNavBar(){
         x = 1;
     }
     else {
-        document.getElementById("buttons").style.width = "20%" ;
+        document.getElementById("navBar").style.width = "20%" ;
         var text =  document.getElementsByClassName("NavText");
         var i;
         for (i=0; i<text.length; i++)

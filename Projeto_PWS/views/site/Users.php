@@ -45,7 +45,7 @@ $users = $params;
 </div>
 
 
-<div style="width: 79%; float: right">
+<div style="width: 79%; float: left; margin-left: 10px;">
     <h2>Users</h2>
     <h2 class="top-space"></h2>
     <div class="row">

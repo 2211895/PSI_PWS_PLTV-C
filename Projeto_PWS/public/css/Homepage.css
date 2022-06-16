@@ -9,14 +9,14 @@ body{
 
 #navBar{
     width: 20%;
-
+    transition: 0.5s;
 }
 
 #buttons{
     background-color: #27282b;
     width: 100%;
     height: 100vh;
-    transition: 0.5s;
+
     box-shadow: 13px 4px 15px -6px rgba(0,0,0,0.68);
 
 }
