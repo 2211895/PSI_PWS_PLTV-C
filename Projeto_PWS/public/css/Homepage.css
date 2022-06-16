@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    background: linear-gradient(90deg, rgba(82,151,255,1) 0%, rgba(82,109,255,1) 100%);
+}
+
+*{
+    font-family: Arial;
+}
+
+#navBar{
+    width: 20%;
+    transition: 0.5s;
+}
+
+#buttons{
+    background-color: #27282b;
+    width: 100%;
+    height: 100vh;
+
+    box-shadow: 13px 4px 15px -6px rgba(0,0,0,0.68);
+
+}
+
+#buttons a{
+    width: 100%;
+    border-radius: 0px;
+    background-color: #27282b ;
+    color: white;
+    border-bottom: 1px solid #34353b;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 0px;
+    transition: 0.3s;
+
+}
+
+#buttons a:hover{
+    transition: 0.3s;
+    background-color: #34353b;
+}
+
+#hideNavBar{
+    background-color: #27282b;
+    border: none;
+    color: white;
+    transform: rotate(0deg);
+    transition: 0.3s;
+}
+
+.NavText{
+    display: inline;
+}
