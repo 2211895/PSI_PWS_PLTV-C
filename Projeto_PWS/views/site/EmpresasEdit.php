@@ -2,7 +2,7 @@
 $empresa = $params;
 ?>
 
-<h1>EDIT EMPRESA</h1>
+<h1>Editar Empresa</h1>
 
 <form action=router.php?c=empresas&a=update&id=<?=$empresa->id?> method="post">
     <div>
@@ -26,7 +26,7 @@ $empresa = $params;
         <input type='text' class="form-control" name='morada' value="<?=$empresa->morada?>">
     </div>
     <div>
-        <label>CODIGO POSTAL:</label>
+        <label>CÓDIGO POSTAL:</label>
         <input type='text' class="form-control" name='codpostal' value="<?=$empresa->codpostal?>">
     </div>
     <div>
@@ -36,7 +36,7 @@ $empresa = $params;
     <div>
         <label>CAPITAL:</label>
         <input type='number' class="form-control" min="0" step="0.01" name='capital' value="<?=$empresa->capital?>">
-    <button type="submit" class="btn btn-info">Submit</button>
+    <button type="submit" class="btn btn-info">Concluir</button>
 </form>
 
 <a href="router.php?c=empresas&a=index" class="btn btn-info" role="button">Voltar</a>

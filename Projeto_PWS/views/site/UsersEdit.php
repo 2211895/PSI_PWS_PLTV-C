@@ -3,12 +3,6 @@ $users = $params;
 ?>
 
 <h1>EDIT USER</h1>
-<!--- DATALISTS --->
-<datalist id="roles">
-    <option value=1>
-    <option value=2>
-    <option value=3>
-</datalist>
 
 <form action=router.php?c=users&a=update&id=<?=$users->id?> method="post">
     <div>
@@ -36,7 +30,7 @@ $users = $params;
         <input type='text' class="form-control" name='morada' value="<?=$users->morada?>">
     </div>
     <div>
-        <label>CODIGO POSTAL:</label>
+        <label>CÓDIGO POSTAL:</label>
         <input type='text' class="form-control" name='codigopostal' value="<?=$users->codigopostal?>">
     </div>
     <div>
@@ -50,10 +44,10 @@ $users = $params;
                 <option value=1>Administrador</option>
                 <option value=3>Cliente</option>
             <?php } ?>
-            <option value=2>Funcionario</option>
+            <option value=2>Funcionário</option>
         </select>
     </div>
-    <button type="submit" class="btn btn-info">Submit</button>
+    <button type="submit" class="btn btn-info">Concluir</button>
 </form>
 
 <a href="router.php?c=users&a=index" class="btn btn-info" role="button">Voltar</a>

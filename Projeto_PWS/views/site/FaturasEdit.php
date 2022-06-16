@@ -64,7 +64,7 @@ if($valorTotal>0){?>
             <th><h3>Stock</h3></th>
             <th><h3>Iva</h3></th>
             <th><h3>Preço Total</h3></th>
-            <th><h3>Acções</h3></th>
+            <th><h3>Ações</h3></th>
             </thead>
             <tbody>
             <?php foreach ($produtos as $produto) {?>
@@ -81,7 +81,7 @@ if($valorTotal>0){?>
                             <form action="router.php?c=linhasfatura&a=store&idProduto=<?=$produto->id?>&idFatura=<?=$faturaAtual->id?>" method="post">
                                 <label>Quantidade:</label>
                                 <input type='number' min="0" max="<?=$produto->stock?>" name='quantidade' value="">
-                                <button type="submit" class="btn btn-info">Submit</button>
+                                <button type="submit" class="btn btn-info">Selecionar</button>
                             </form>
                         <?php }
                         else{

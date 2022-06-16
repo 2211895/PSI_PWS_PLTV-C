@@ -22,7 +22,7 @@ $users = User::all();
             <th class="th-sm"><h3>Telefone</h3></th>
             <th class="th-sm"><h3>Nif</h3></th>
             <th class="th-sm"><h3>Morada</h3></th>
-            <th class="th-sm"><h3>Codigo postal</h3></th>
+            <th class="th-sm"><h3>Código postal</h3></th>
             <th class="th-sm"><h3>Localidade</h3></th>
             <th class="th-sm"><h3></h3></th>
             </tr>

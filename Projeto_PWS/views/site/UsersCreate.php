@@ -1,16 +1,9 @@
 
-<h1>CREATE USER</h1>
-<!--- DATALISTS --->
-<datalist id="roles">
-    <option value=1>
-    <option value=2>
-    <option value=3>
-</datalist>
-
+<h1>Criar utilizador</h1>
 <form action="router.php?c=users&a=store" method="post">
     <div>
         <label>NOME:</label>
-        <input type='text' class="form-control" name='username' placeholder="insira o username..." >
+        <input type='text' class="form-control" name='username' placeholder="Insira o username..." >
     </div>
     <div>
         <label>PASSWORD:</label>
@@ -33,7 +26,7 @@
         <input type='text' class="form-control" name='morada' placeholder="Insira a sua morada...">
     </div>
     <div>
-        <label>CODIGO POSTAL:</label>
+        <label>CÓDIGO POSTAL:</label>
         <input type='text' class="form-control" name='codigopostal' placeholder="Insira o codigo postal...">
     </div>
     <div>
@@ -45,14 +38,13 @@
         <select name="role">
             <?php if($_SESSION['role']==1){?>
                 <option value=1>Administrador</option>
-                <option value=2>Funcionario</option>
+                <option value=2>Funcionário</option>
             <?php } ?>
             <option value=3>Cliente</option>
         </select>
-       <!-- <input type='number' class="form-control" min="1" max="3" name='role' placeholder="Insira o role do user...">--->
     </div>
-    <button type="submit" class="btn btn-info">Submit</button>
+    <button type="submit" class="btn btn-info">Criar</button>
     <a href="router.php?c=users&a=index" class="btn btn-info"
-       role="button">Homepage</a>
+       role="button">Voltar</a>
 </form>
 

@@ -24,7 +24,7 @@ else{
             <th><h3>Data </h3></th>
             <th><h3>Iva</h3></th>
             <th><h3>Valor total</h3></th>
-            <th><h3>Acções</h3></th></thead>
+            <th><h3>Ações</h3></th></thead>
             <tbody>
             <?php foreach ($faturas as $fatura) {
                 if($fatura->cliente_id == $userAtual){
@@ -54,7 +54,7 @@ else{
                         <td><?=number_format($valorTotal, 2)?>€</td>
                         <td>
                             <a href="router.php?c=faturas&a=details&id=<?=$fatura->id ?>"
-                               class="btn btn-info" role="button">Details</a>
+                               class="btn btn-info" role="button">Detalhes</a>
                         </td>
                     </tr>
                     <?php

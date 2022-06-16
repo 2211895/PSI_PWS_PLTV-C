@@ -18,7 +18,7 @@ $faturas = $params;
             <th><h3>Estado</h3></th>
             <th><h3>Cliente</h3></th>
             <th><h3>Emitida por</h3></th>
-            <th><h3>Acções</h3></th></thead>
+            <th><h3>Ações</h3></th></thead>
             <tbody>
             <?php foreach ($faturas as $fatura) {
                 $cliente = User::find([$fatura->cliente_id]);
@@ -39,10 +39,10 @@ $faturas = $params;
                     <td><?=$funcionario->username?></td>
                     <td>
                         <a href="router.php?c=faturas&a=details&id=<?=$fatura->id ?>"
-                           class="btn btn-info" role="button">Details</a>
+                           class="btn btn-info" role="button">Detalhes</a>
                         <?php if($fatura->estado==0){
                             echo"<a href='router.php?c=faturas&a=edit&id=$fatura->id'
-                                    class='btn btn-info' role='button'>Edit</a>";
+                                    class='btn btn-info' role='button'>Editar</a>";
                         }
                         ?>
                     </td>

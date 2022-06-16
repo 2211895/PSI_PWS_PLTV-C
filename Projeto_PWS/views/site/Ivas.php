@@ -15,7 +15,7 @@ $ivas = $params;
                 <th><h3>Percentagem</h3></th>
                 <th><h3>Descrição</h3></th>
                 <th><h3>Vigor</h3></th>
-                <th><h3>Acções</h3></th>
+                <th><h3>Ações</h3></th>
                 </thead>
                 <tbody>
                 <?php foreach ($ivas as $iva) { ?>
@@ -36,10 +36,10 @@ $ivas = $params;
                             }?></td>
                         <td>
                             <a href="router.php?c=ivas&a=edit&id=<?=$iva->id ?>"
-                               class="btn btn-info" role="button">Edit</a>
+                               class="btn btn-info" role="button">Editar</a>
                             <?php if($iva->id > 3){
                             ?>   <a href='router.php?c=ivas&a=delete&id=<?$iva->id?>'
-                                 class='btn btn-warning' role='button'>Delete</a>
+                                 class='btn btn-warning' role='button'>Apagar</a>
                             <?php } ?>
                         </td>
                     </tr>
@@ -48,10 +48,10 @@ $ivas = $params;
             </table>
         </div>
         <div class="col-sm-6">
-            <h3>Create a new IVA</h3>
+            <h3>Criar uma nova taxa de Iva</h3>
             <p>
                 <a href="router.php?c=ivas&a=create" class="btn btn-info"
-                   role="button">New</a>
+                   role="button">Nova taxa</a>
                 <a href="router.php?c=site&a=index" class="btn btn-info"
                    role="button">Homepage</a>
             </p>

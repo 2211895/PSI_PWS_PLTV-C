@@ -10,7 +10,7 @@
 if($_SESSION['role']!=3){
     echo '
         <a href="router.php?c=users&a=index"
-        class="btn btn-info" role="button">Users</a>
+        class="btn btn-info" role="button">Utilizadores</a>
         <a href="router.php?c=empresas&a=index"
         class="btn btn-info" role="button">Empresas</a>
         <a href="router.php?c=ivas&a=index"

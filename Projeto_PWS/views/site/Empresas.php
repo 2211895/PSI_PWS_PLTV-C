@@ -12,15 +12,15 @@ $empresas = $params;
             <table class="table tablestriped">
                 <thead>
                 <th><h3>Id</h3></th>
-                <th><h3>Name</h3></th>
+                <th><h3>Nome</h3></th>
                 <th><h3>Email</h3></th>
                 <th><h3>Telefone</h3></th>
                 <th><h3>Nif</h3></th>
                 <th><h3>Morada</h3></th>
-                <th><h3>Codigo postal</h3></th>
+                <th><h3>Código postal</h3></th>
                 <th><h3>Localidade</h3></th>
                 <th><h3>Capital</h3></th>
-                <th><h3>Acções</h3></th>
+                <th><h3>Ações</h3></th>
                 </thead>
                 <tbody>
                 <?php foreach ($empresas as $empresa) { ?>
@@ -35,10 +35,8 @@ $empresas = $params;
                         <td><?=$empresa->localidade?></td>
                         <td><?=$empresa->capital?></td>
                         <td>
-                            <a href="router.php?c=empresas&a=details&id=<?=$empresa->id ?>"
-                               class="btn btn-info" role="button">Details</a>
                             <a href="router.php?c=empresas&a=edit&id=<?=$empresa->id ?>"
-                               class="btn btn-info" role="button">Edit</a>
+                               class="btn btn-info" role="button">Editar</a>
                         </td    >
                     </tr>
                 <?php } ?>

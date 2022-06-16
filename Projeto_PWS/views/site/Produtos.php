@@ -15,7 +15,7 @@ if($_SESSION['role'] == 3)
         <table class="table tablestriped"><thead>
             <th><h3>Id</h3></th>
             <th><h3>Descrição</h3></th>
-            <th><h3>Referencia</h3></th>
+            <th><h3>Referência</h3></th>
             <th><h3>Preço</h3></th>
             <th><h3>Stock</h3></th>
             <th><h3>Iva</h3></th>
@@ -31,9 +31,9 @@ if($_SESSION['role'] == 3)
                     <td><?=$produto->iva->descricao?>  <?=$produto->iva->percentagem?>%</td>
                     <td>
                         <a href="router.php?c=produtos&a=edit&id=<?=$produto->id ?>"
-                           class="btn btn-info" role="button">Edit</a>
+                           class="btn btn-info" role="button">Editar</a>
                         <a href='router.php?c=produtos&a=delete&id=<?=$produto->id?>'
-                           class='btn btn-warning' role='button'>Delete</a>
+                           class='btn btn-danger' role='button'>Apagar</a>
                     </td>
                 </tr>
             <?php } ?>
@@ -41,10 +41,10 @@ if($_SESSION['role'] == 3)
         </table>
     </div>
     <div class="col-sm-6">
-        <h3>Create a new produto</h3>
+        <h3>Criar um novo produto</h3>
         <p>
             <a href="router.php?c=produtos&a=create" class="btn btn-info"
-               role="button">New</a>
+               role="button">Novo produto</a>
             <a href="router.php?c=site&a=index" class="btn btn-info"
                role="button">Homepage</a>
         </p>

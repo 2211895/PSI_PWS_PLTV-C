@@ -6,7 +6,7 @@ $users = $params;
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 
-<h2>Users</h2>
+<h2>Utilizadores</h2>
 <h2 class="top-space"></h2>
 <div class="row">
     <div class="col-sm-12">
@@ -37,7 +37,7 @@ $users = $params;
                                 echo 'Administrador';
                                 break;
                             case 2:
-                                echo 'Funcionario';
+                                echo 'Funcionário';
                                 break;
                             case 3:
                                 echo 'Cliente';
@@ -52,12 +52,12 @@ $users = $params;
 
                         <?php if($_SESSION['userId']==$user->id || $_SESSION['role']==1) {
                             echo "<a href='router.php?c=users&a=edit&id=$user->id'
-                           class='btn btn-info' role='button'>Edit</a>";
+                           class='btn btn-info' role='button'>Editar</a>";
                         }
                         ?>
                         <?php if($user->role !=1 && $_SESSION['role']==1) {
                             echo "<a href='router.php?c=users&a=delete&id=$user->id'
-                           class='btn btn-warning' role='button'>Delete</a>";
+                           class='btn btn-warning' role='button'>Apagar</a>";
                         }
                         ?>
                     </td    >
@@ -67,10 +67,10 @@ $users = $params;
         </table>
     </div>
     <div class="col-sm-6">
-        <h3>Create a new USER</h3>
+        <h3>Criar um novo utilizador</h3>
         <p>
             <a href="router.php?c=users&a=create" class="btn btn-info"
-               role="button">New</a>
+               role="button">Novo utilizador</a>
             <a href="router.php?c=site&a=index" class="btn btn-info"
                role="button">Homepage</a>
         </p>
