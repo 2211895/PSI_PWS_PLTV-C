@@ -72,11 +72,6 @@ if(!(isset($_GET['c']) && isset($_GET['a']))){
                     $usersController->showUsers();
                     break;
 
-                case 'details':
-                    $id = $_GET['id'];
-                    $usersController->detailsUser($id);
-                    break;
-
                 case 'edit':
                     $id = $_GET['id'];
                     $usersController->editUser($id);
@@ -130,11 +125,6 @@ if(!(isset($_GET['c']) && isset($_GET['a']))){
             switch ($action) {
                 case 'index':
                     $ivasController->showIvas();
-                    break;
-
-                case 'details':
-                    $id = $_GET['id'];
-                    $ivasController->detailsIva($id);
                     break;
 
                 case 'edit':

@@ -22,6 +22,5 @@
             }
             else
                 echo 'nao existe session';
-                //$this->redirectToRoute('login', 'index');
         }
     }

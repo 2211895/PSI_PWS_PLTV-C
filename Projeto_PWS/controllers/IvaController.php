@@ -7,10 +7,6 @@ class IvaController extends SiteController
         $this->renderView('Ivas', $ivas);
     }
 
-    public function detailsIva($id){
-
-    }
-
     public function editIva($id){
         $iva = Iva::find([$id]);
         if (is_null($iva)) {
@@ -29,7 +25,6 @@ class IvaController extends SiteController
             $iva->save();
             $this->redirectToRoute('ivas', 'index');
         } else {
-            //DA ERRO POP UP
             $this->redirectToRoute('ivas', 'edit');
         }
     }
@@ -46,12 +41,10 @@ class IvaController extends SiteController
                 $this->redirectToRoute('ivas','index');
             }
             else{
-                //DA ERRO  POP UP
                 $this->redirectToRoute('ivas', 'create');
             }
         }
         else{
-            //DA ERRO POP UP
             $this->redirectToRoute('ivas','create');
         }
 
@@ -64,7 +57,6 @@ class IvaController extends SiteController
             $this->redirectToRoute('ivas', 'index');
         }
         else{
-            //ERRO POP UP
             $this->redirectToRoute('ivas', 'index');
         }
     }

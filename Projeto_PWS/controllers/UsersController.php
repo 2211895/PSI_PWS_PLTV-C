@@ -7,10 +7,6 @@ class UsersController extends SiteController
         $this->renderView('Users', $users);
     }
 
-    public function detailsUser($id){
-
-    }
-
     public function editUser($id){
         $users = User::find([$id]);
         if (is_null($users)) {
@@ -30,7 +26,6 @@ class UsersController extends SiteController
             $user->save();
             $this->redirectToRoute('users', 'index');
         } else {
-            //DA ERRO POP UP
             $this->redirectToRoute('users', 'edit');
         }
     }
@@ -47,12 +42,10 @@ class UsersController extends SiteController
                 $this->redirectToRoute('users','index');
             }
             else{
-                //DA ERRO  POP UP
                 $this->redirectToRoute('users', 'create');
             }
         }
         else{
-            //DA ERRO POP UP
             $this->redirectToRoute('users','create');
         }
 
@@ -65,7 +58,6 @@ class UsersController extends SiteController
             $this->redirectToRoute('users', 'index');
         }
         else{
-            //ERRO POP UP
             $this->redirectToRoute('users', 'index');
         }
     }

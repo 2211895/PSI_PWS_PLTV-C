@@ -7,10 +7,6 @@ class ProdutosController extends SiteController
         $this->renderView('Produtos', $produtos);
     }
 
-    public function detailsUser($id){
-
-    }
-
     public function editProduto($id){
         $produto = Produto::find([$id]);
         if (is_null($produto)) {
