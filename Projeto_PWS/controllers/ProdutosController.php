@@ -10,11 +10,8 @@ class ProdutosController extends SiteController
     public function editProduto($id){
         $produto = Produto::find([$id]);
         if (is_null($produto)) {
-            //TODO redirect to standard error page
         } else {
-            //mostrar a vista edit passando os dados por parâmetro
             $this->renderView('ProdutosEdit', $produto);
-            //require_once 'views/site/UsersEdit.php';
         }
     }
 
@@ -26,7 +23,6 @@ class ProdutosController extends SiteController
             $produto->save();
             $this->redirectToRoute('produtos', 'index');
         } else {
-            //DA ERRO POP UP
             $this->redirectToRoute('produtos', 'edit');
         }
     }
@@ -44,12 +40,10 @@ class ProdutosController extends SiteController
                 $this->redirectToRoute('produtos','index');
             }
             else{
-                //DA ERRO  POP UP
                 $this->redirectToRoute('produtos', 'create');
             }
         }
         else{
-            //DA ERRO POP UP
             $this->redirectToRoute('produtos','create');
         }
 

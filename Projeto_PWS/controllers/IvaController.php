@@ -10,9 +10,7 @@ class IvaController extends SiteController
     public function editIva($id){
         $iva = Iva::find([$id]);
         if (is_null($iva)) {
-            //TODO redirect to standard error page
         } else {
-            //mostrar a vista edit passando os dados por parâmetro
             $this->renderView('IvasEdit', $iva);
         }
     }

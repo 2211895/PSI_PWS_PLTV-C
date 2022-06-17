@@ -10,11 +10,8 @@ class UsersController extends SiteController
     public function editUser($id){
         $users = User::find([$id]);
         if (is_null($users)) {
-            //TODO redirect to standard error page
         } else {
-            //mostrar a vista edit passando os dados por parâmetro
             $this->renderView('UsersEdit', $users);
-            //require_once 'views/site/UsersEdit.php';
         }
     }
 
@@ -53,7 +50,7 @@ class UsersController extends SiteController
 
     public function deleteUser($id){
         $user = User::find([$id]);
-        if($user->role != 1){ //NAO PODE APAGAR CASO SEJA ADMINISTRADOR
+        if($user->role != 1){
             $user->delete();
             $this->redirectToRoute('users', 'index');
         }

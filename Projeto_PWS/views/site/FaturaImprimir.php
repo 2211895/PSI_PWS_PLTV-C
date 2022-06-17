@@ -18,7 +18,7 @@ $cliente = User::find([$faturaAtual->cliente_id]);
         <div class="column">
             <h2>Empresa:</h2>
             <a><?=$empresa->designacao?><br></a>
-            <a>Morada: <?=$empresa->morada?> <br> <?=$empresa->localidade?> <?=$empresa->codpostal?><br></a>
+            <a>Morada: <?=$empresa->morada?>, <br> <?=$empresa->localidade?> <?=$empresa->codpostal?><br></a>
             <a>Email: <?=$empresa->email?> <br></a>
             <a>Telefone: <?=$empresa->telefone?><br></a>
             <h5>Funcionário: <?=$funcionario->username?></h5>
@@ -26,7 +26,7 @@ $cliente = User::find([$faturaAtual->cliente_id]);
         <div class="column">
             <h2>Cliente:</h2>
             <a><?=$cliente->username?><br></a>
-            <a>Morada: <?=$cliente->morada?> <br> <?=$cliente->localidade?> <?=$cliente->codigopostal?><br></a>
+            <a>Morada: <?=$cliente->morada?>, <br> <?=$cliente->localidade?> <?=$cliente->codigopostal?><br></a>
             <a>Email: <?=$cliente->email?> <br></a>
             <a>Telefone: <?=$cliente->telefone?></a>
         </div>

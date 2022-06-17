@@ -16,7 +16,6 @@ class EmpresasController extends SiteController
         if (is_null($empresa)){
             //TODO redirect to standard error page
         } else {
-            //mostrar a vista edit passando os dados por parâmetro
             $this->renderView('EmpresasEdit', $empresa);
         }
     }
@@ -29,7 +28,6 @@ class EmpresasController extends SiteController
             $empresa->save();
             $this->redirectToRoute('empresas', 'index');
         } else {
-            //DA ERRO POP UP
             $this->redirectToRoute('empresas', 'edit');
         }
     }

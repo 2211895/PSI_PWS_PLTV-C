@@ -3,58 +3,9 @@
 }
 
 body{
-    /*background-image: url("../img/background.png");*/
     background: linear-gradient(90deg, rgba(82,151,255,1) 0%, rgba(82,109,255,1) 100%);
     margin: 0px;
 }
-/*
-#Login{
-    background-color: white;
-    height: 100vh;
-    width: 40%;
-    box-shadow: 8px 8px 48px -3px #000000;
-    text-align: center;
-
-}
-
-#login-text{
-    margin:auto;
-    font-weight: bold;
-    padding-top: 15vh;
-    padding-bottom: 8vh;
-
-}
-
-#formulario{
-    margin: auto;
-}
-
-.inputs{
-    margin-top: 4vh;
-    width: 70%;
-    height: 30px;
-    background-color:#ebebeb;
-    border:none;
-    border-radius: 5px;
-    color: #27282b;
-    font-weight: bold;
-
-}
-
-.inputs:focus{
-    background-color: white;
-}
-
-#submitInput{
-    margin-top: 5vh;
-    background-color: #ffbb1f;
-    color: #ffffff;
-    width: 70%;
-    border: none;
-    border-radius: 5px;
-    height: 40px;
-    font-weight: bold;
-}*/
 
 #content{
     background-color: white;
