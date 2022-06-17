@@ -93,9 +93,9 @@ $ivas = $params;
             <h3>Criar uma nova taxa de Iva</h3>
             <p>
                 <a href="router.php?c=ivas&a=create" class="btn btn-info"
-                   role="button">Nova taxa</a>
+                   role="button" style="background-color: rgba(82,151,255,1);color: white;border-radius: 3px;text-decoration: none;padding: 4px;">Nova taxa</a>
                 <a href="router.php?c=site&a=index" class="btn btn-info"
-                   role="button">Homepage</a>
+                   role="button" style="background-color: rgba(82,151,255,1);color: white;border-radius: 3px;text-decoration: none;padding: 4px;">Homepage</a>
             </p>
         </div>
     </div>

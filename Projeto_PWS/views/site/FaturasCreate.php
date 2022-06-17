@@ -53,7 +53,7 @@ $users = User::all();
 
 
     <div style="width: 79%; float: left; margin-left: 10px;">
-<h2 id="caixa">Users</h2>
+<h2 id="caixa">Criar Fatura</h2>
 <input type="text" id="Input" onkeyup="procurarProduto()" placeholder="Search for names..">
 <h2 class="top-space"></h2>
 <div class="row">
@@ -83,7 +83,8 @@ $users = User::all();
                         <td><?=$user->localidade?></td>
                         <td>
                             <a href="router.php?c=faturas&a=store&id=<?=$user->id ?>"
-                               class="btn btn-info" role="button">Selecionar Cliente</a>
+                               class="btn btn-info" role="button"
+                               style="background-color: rgba(82,151,255,1);color: white;border-radius: 3px;text-decoration: none;padding: 4px;">Selecionar Cliente</a>
                         </td>
                     </tr>
                 <?php }
@@ -92,7 +93,7 @@ $users = User::all();
     </div>
     <div class="col-sm-6" id="caixa">
             <a href="router.php?c=site&a=index" class="btn btn-info"
-               role="button">Homepage</a>
+               role="button" style="background-color: rgba(82,151,255,1);color: white;border-radius: 3px;text-decoration: none;padding: 4px;">Homepage</a>
         </p>
     </div>
 </div>

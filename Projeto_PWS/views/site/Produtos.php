@@ -88,9 +88,9 @@ if($_SESSION['role'] == 3)
         <h3>Criar um novo produto</h3>
         <p>
             <a href="router.php?c=produtos&a=create" class="btn btn-info"
-               role="button">Novo produto</a>
+               role="button" style="background-color: rgba(82,151,255,1);color: white;border-radius: 3px;text-decoration: none;padding: 4px;">Novo produto</a>
             <a href="router.php?c=site&a=index" class="btn btn-info"
-               role="button">Homepage</a>
+               role="button" style="background-color: rgba(82,151,255,1);color: white;border-radius: 3px;text-decoration: none;padding: 4px;">Homepage</a>
         </p>
     </div>
 </div>

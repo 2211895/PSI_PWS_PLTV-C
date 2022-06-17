@@ -100,13 +100,13 @@ if($valorTotal>0){?>
     <div class="col-sm-6">
         <p>
             <a href="router.php?c=faturas&a=terminar&id=<?=$faturaAtual->id?>" class="btn btn-info"
-               role="button">Terminar fatura</a>
+               role="button" style="background-color: rgba(82,151,255,1);color: white;border-radius: 3px;text-decoration: none;padding: 4px;">Terminar fatura</a>
             <a href="router.php?c=site&a=index" class="btn btn-info"
-               role="button">Guardar como rascunho</a>
+               role="button" style="background-color: rgba(82,151,255,1);color: white;border-radius: 3px;text-decoration: none;padding: 4px;">Guardar como rascunho</a>
             <a href="router.php?c=faturas&a=index" class="btn btn-info"
-               role="button">Lista de faturas</a>
+               role="button" style="background-color: rgba(82,151,255,1);color: white;border-radius: 3px;text-decoration: none;padding: 4px;">Lista de faturas</a>
             <a href="router.php?c=faturas&a=delete&id=<?=$faturaAtual->id?>" class="btn btn-danger"
-               role="button">Cancelar fatura</a>
+               role="button" style="background-color: rgba(82,151,255,1);color: white;border-radius: 3px;text-decoration: none;padding: 4px;">Cancelar fatura</a>
         </p>
     </div>
 </div>

@@ -53,14 +53,15 @@ $cliente = User::find([$faturaAtual->cliente_id]);
         <p>
             <?php if($_SESSION['role']!=3){
                 echo"<a href='router.php?c=faturas&a=index' class='btn btn-info'
-               role='button'>Voltar às faturas</a>";
+               role='button' style='background-color: rgba(82,151,255,1);color: white;border-radius: 3px;text-decoration: none;padding: 4px;'>Voltar às faturas</a>";
             }
             else{
                 echo"<a href='router.php?c=faturas&a=cliente&id=". $_SESSION["role"] . "' class='btn btn-info'
-               role='button'>Voltar às faturas</a>";
+               role='button' style='background-color: rgba(82,151,255,1);color: white;border-radius: 3px;text-decoration: none;padding: 4px;'>Voltar às faturas</a>";
             }
             ?>
-            <a href="router.php?c=faturas&a=imprimir&id=<?=$faturaAtual->id?>" target="_blank" class="btn btn-info" role="button">Imprimir</a>
+            <a href="router.php?c=faturas&a=imprimir&id=<?=$faturaAtual->id?>" target="_blank" class="btn btn-info" role="button"
+               style="background-color: rgba(82,151,255,1);color: white;border-radius: 3px;text-decoration: none;padding: 4px;">Imprimir</a>
         </p>
     </div>
 </div>

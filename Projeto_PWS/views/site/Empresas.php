@@ -88,7 +88,7 @@ $empresas = $params;
         </div>
         <div class="col-sm-6" id="caixa">
                 <a href="router.php?c=site&a=index" class="btn btn-info"
-                   role="button">Homepage</a>
+                   role="button" style="background-color: rgba(82,151,255,1);color: white;border-radius: 3px;text-decoration: none;padding: 4px;">Homepage</a>
             </p>
         </div>
     </div>
