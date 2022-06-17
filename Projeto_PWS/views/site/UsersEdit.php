@@ -1,8 +1,9 @@
 <?php
 $users = $params;
 ?>
-
-<h1>EDIT USER</h1>
+<link rel="stylesheet" href="public/css/Edit.css">
+<div id="content">
+<h1 style="text-align: center">EDIT USER</h1>
 
 <form action=router.php?c=users&a=update&id=<?=$users->id?> method="post">
     <div>
@@ -51,3 +52,4 @@ $users = $params;
 </form>
 
 <a href="router.php?c=users&a=index" class="btn btn-info" role="button">Voltar</a>
+</div>

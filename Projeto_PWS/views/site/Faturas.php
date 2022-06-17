@@ -49,10 +49,10 @@ $faturas = $params;
         </div>
 
     </div>
-    
+
     <div style="width: 79%; float: left; margin-left: 10px;">
 <h2 id="caixa">Faturas</h2>
-<input type="text" id="Input" onkeyup="barraPesquisa()" placeholder="Search for names..">
+<input type="text" id="Input" onkeyup="procurarProduto()" placeholder="Search for names..">
 <h2 class="top-space"></h2>
 <div class="row">
     <div class="col-sm-12">
