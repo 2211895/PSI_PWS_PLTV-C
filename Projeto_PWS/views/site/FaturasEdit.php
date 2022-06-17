@@ -5,11 +5,15 @@ $produtos = Produto::all();
 $linhasFatura = Linhafatura::all();
 $valorTotal = 0;
 
-?>
+?><!--
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" media="all">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+!-->
 <script src="public/js/FaturasEdit.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+<link rel="stylesheet" href="public/css/Edit.css">
+<div id="content" style="width: 60%; padding-left: 10vh">
 <?php if($faturaAtual->valortotal > 0 ){?>
     <div class="col-sm-12">
         <table class="table tablestriped"><thead>
@@ -26,14 +30,14 @@ $valorTotal = 0;
                     $valorLinhaAtual = $linhaFatura->quantidade * ($linhaFatura->valorunitario + $linhaFatura->valoriva);
                     $valorTotal+= $valorLinhaAtual;
                     ?>
-                    <tr>
+                    <tr style="box-shadow: 13px 4px 15px -6px rgba(0,0,0,0.68);">
                         <td><?=$produtoAtual->descricao?></td>
                         <td><?=$linhaFatura->quantidade?></td>
                         <td><?=number_format($linhaFatura->valorunitario, 2)?>€</td>
                         <td><?=number_format($linhaFatura->valoriva, 2)?>€</td>
                         <td><?=number_format($valorLinhaAtual, 2)?>€</td>
                         <td><a href="router.php?c=linhasfatura&a=remove&id=<?=$linhaFatura->id ?>"
-                               class="btn btn-info" role="button">Remover</a></td>
+                               class="btn btn-info" role="button"><i class='fa-solid fa-trash-can' style='color: black'></i></a></td>
                     </tr>
 
                 <?php }
@@ -57,7 +61,7 @@ if($valorTotal>0){?>
 <div class="row">
     <div class="col-sm-12">
         <table class="table tablestriped" id="tabela"><thead>
-            <th><h3>Id</h3></th>
+            <th ><h3>Id</h3></th>
             <th><h3>Referencia</h3></th>
             <th><h3>Descrição</h3></th>
             <th><h3>Preço</h3></th>
@@ -68,7 +72,7 @@ if($valorTotal>0){?>
             </thead>
             <tbody>
             <?php foreach ($produtos as $produto) {?>
-                <tr>
+                <tr style="box-shadow: 13px 4px 15px -6px rgba(0,0,0,0.68);">
                     <td><?=$produto->id?></td>
                     <td><?=$produto->referencia?></td>
                     <td><?=$produto->descricao?></td>
@@ -81,7 +85,7 @@ if($valorTotal>0){?>
                             <form action="router.php?c=linhasfatura&a=store&idProduto=<?=$produto->id?>&idFatura=<?=$faturaAtual->id?>" method="post">
                                 <label>Quantidade:</label>
                                 <input type='number' min="0" max="<?=$produto->stock?>" name='quantidade' value="">
-                                <button type="submit" class="btn btn-info">Selecionar</button>
+                                <button type="submit" class="btn btn-info" id="selecionar">Selecionar</button>
                             </form>
                         <?php }
                         else{
@@ -105,6 +109,7 @@ if($valorTotal>0){?>
                role="button">Cancelar fatura</a>
         </p>
     </div>
+</div>
 </div>
 
 
