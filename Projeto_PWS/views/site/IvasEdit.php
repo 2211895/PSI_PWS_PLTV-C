@@ -5,7 +5,7 @@ $iva = $params;
 
 <link rel="stylesheet" href="public/css/Edit.css">
 <div id="content">
-<h1>Editar Iva</h1>
+<h1 style="text-align: center">Editar Iva</h1>
 
 <form action=router.php?c=ivas&a=update&id=<?=$iva->id?> method="post">
     <div class="informacoes">

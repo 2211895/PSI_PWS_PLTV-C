@@ -13,7 +13,7 @@ $valorTotal = 0;
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <link rel="stylesheet" href="public/css/Edit.css">
-<div id="content" style="width: 60%; padding-left: 10vh">
+<div id="content" style="width: 60%;text-align: center">
 <?php if($faturaAtual->valortotal > 0 ){?>
     <div class="col-sm-12">
         <table class="table tablestriped"><thead>
@@ -30,7 +30,7 @@ $valorTotal = 0;
                     $valorLinhaAtual = $linhaFatura->quantidade * ($linhaFatura->valorunitario + $linhaFatura->valoriva);
                     $valorTotal+= $valorLinhaAtual;
                     ?>
-                    <tr style="box-shadow: 13px 4px 15px -6px rgba(0,0,0,0.68);">
+                    <tr style="box-shadow: 0px 1px 0px 0px #000000;">
                         <td><?=$produtoAtual->descricao?></td>
                         <td><?=$linhaFatura->quantidade?></td>
                         <td><?=number_format($linhaFatura->valorunitario, 2)?>€</td>
@@ -72,7 +72,7 @@ if($valorTotal>0){?>
             </thead>
             <tbody>
             <?php foreach ($produtos as $produto) {?>
-                <tr style="box-shadow: 13px 4px 15px -6px rgba(0,0,0,0.68);">
+                <tr style="box-shadow: 0px 1px 0px 0px #000000;">
                     <td><?=$produto->id?></td>
                     <td><?=$produto->referencia?></td>
                     <td><?=$produto->descricao?></td>
