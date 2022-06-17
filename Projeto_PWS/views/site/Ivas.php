@@ -89,7 +89,7 @@ $ivas = $params;
                 </tbody>
             </table>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-6" id="caixa">
             <h3>Criar uma nova taxa de Iva</h3>
             <p>
                 <a href="router.php?c=ivas&a=create" class="btn btn-info"

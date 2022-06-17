@@ -86,7 +86,7 @@ $empresas = $params;
                 </tbody>
             </table>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-6" id="caixa">
                 <a href="router.php?c=site&a=index" class="btn btn-info"
                    role="button">Homepage</a>
             </p>

@@ -52,7 +52,7 @@ if($_SESSION['role'] == 3)
 
 
     <div style="width: 79%; float: left; margin-left: 10px;">
-<h2>Produtos</h2>
+<h2 id="caixa">Produtos</h2>
 <h2 class="top-space"></h2>
 <div class="row">
     <div class="col-sm-12">
@@ -75,16 +75,16 @@ if($_SESSION['role'] == 3)
                     <td><?=$produto->iva->descricao?>  <?=$produto->iva->percentagem?>%</td>
                     <td>
                         <a href="router.php?c=produtos&a=edit&id=<?=$produto->id ?>"
-                           class="btn btn-info" role="button">Editar</a>
+                           class="btn btn-info" role="button"><i class='fa-solid fa-pencil' style='color: black'></i></a>
                         <a href='router.php?c=produtos&a=delete&id=<?=$produto->id?>'
-                           class='btn btn-danger' role='button'>Apagar</a>
+                           class='btn btn-danger' role='button'><i class='fa-solid fa-trash-can' style='color: black'></i></a>
                     </td>
                 </tr>
             <?php } ?>
             </tbody>
         </table>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-6" id="caixa">
         <h3>Criar um novo produto</h3>
         <p>
             <a href="router.php?c=produtos&a=create" class="btn btn-info"
