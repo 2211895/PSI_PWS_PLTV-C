@@ -103,7 +103,7 @@ if($valorTotal>0){?>
             <a href="router.php?c=faturas&a=index" class="btn btn-info"
                role="button" style="background-color: rgba(82,151,255,1);color: white;border-radius: 3px;text-decoration: none;padding: 4px;">Lista de faturas</a>
             <a href="router.php?c=faturas&a=delete&id=<?=$faturaAtual->id?>" class="btn btn-danger"
-               role="button" style="background-color: rgba(82,151,255,1);color: white;border-radius: 3px;text-decoration: none;padding: 4px;">Cancelar fatura</a>
+               role="button" style="background-color: rgb(255,82,82);color: white;border-radius: 3px;text-decoration: none;padding: 4px;">Apagar fatura</a>
         </p>
     </div>
 </div>
