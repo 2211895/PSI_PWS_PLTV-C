@@ -7,7 +7,7 @@ if($_SESSION['role'] == 3)
 
 <form action=router.php?c=produtos&a=store method="post">
     <div>
-        <label>REFERÊNCIA:</label>
+        <label>REFERÊNCIA:</label><br>
         <input type='text' class="form-control" name='referencia' placeholder="">
     </div>
     <div>
